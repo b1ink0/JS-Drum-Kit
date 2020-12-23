@@ -49,7 +49,7 @@ section div:hover {
   transform: scale(1.1);
   background-color: #0192ec;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   /* For mobile phones: */
   section{
     top: 150px;
