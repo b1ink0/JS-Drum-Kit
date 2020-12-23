@@ -52,9 +52,9 @@ section div:hover {
 @media only screen and (max-width: 1000px) {
   /* For mobile phones: */
   section{
-    top: 150px;
+    top: 400px;
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
     grid-template-columns: repeat(3, 90px);
     grid-template-rows: repeat(3, 180px);
     transition: opacity 2s ease;
