@@ -58,7 +58,7 @@ section div:hover {
     grid-template-columns: repeat(3, 90px);
     grid-template-rows: repeat(3, 180px);
     transition: opacity 2s ease;
-    transform: scale(1.5);
+    transform: scale(1);
   }
   #playButton {
     background: #007CC7;
