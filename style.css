@@ -83,11 +83,11 @@ section div:hover {
     transition: opacity 1s ease;
   }
   button {
-    transform: scale(0.8);
+    transform: scale(1);
     background: #007CC7;
   }
   section div:hover {
-    transform: scale(0.9);
+    transform: scale(1);
     background-color: #0192ec;
   }
   @keyframes small {
