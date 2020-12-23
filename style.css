@@ -83,7 +83,7 @@ section div:hover {
     transition: opacity 1s ease;
   }
   button {
-    transform: scale(1.4);
+    transform: scale(1);
     background: #007CC7;
   }
   section div:hover {
