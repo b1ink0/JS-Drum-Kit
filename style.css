@@ -52,13 +52,12 @@ section div:hover {
 @media only screen and (max-width: 1000px) {
   /* For mobile phones: */
   section{
-    top: 400px;
+    top: 150px;
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(3, 90px);
     grid-template-rows: repeat(3, 180px);
     transition: opacity 2s ease;
-    transform: scale(1);
   }
   #playButton {
     background: #007CC7;
