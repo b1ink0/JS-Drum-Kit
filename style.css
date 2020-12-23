@@ -6,7 +6,6 @@ body {
   height: 100hv;
   display: flex;
   justify-content: space-around;
-  background: black;
   font-family: sans-serif;
   color: white;
   background: #12232E;
@@ -20,7 +19,6 @@ section {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  transition: o;
 }
 section div {
   background: #007CC7;
@@ -46,21 +44,21 @@ p {
   font-weight: bold;
 }
 section div:hover {
-  transform: scale(1.1);
+  /*transform: scale(1.1);*/
   background-color: #0192ec;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
   /* For mobile phones: */
   section{
     top: 150px;
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(3, 90px);
-    grid-template-rows: repeat(3, 180px);
+    grid-gap: 1px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 130px);
     transition: opacity 2s ease;
   }
-  section div{
-    transform: scale(0.8);
+  section div {
+    transform: scale(0.67);
   }
   #playButton {
     background: #007CC7;
@@ -83,29 +81,24 @@ section div:hover {
     transition: opacity 1s ease;
   }
   button {
-    transform: scale(1);
+    transform: scale(1.8);
     background: #007CC7;
   }
   section div:hover {
-    transform: scale(1);
     background-color: #0192ec;
   }
   @keyframes small {
-  0%{transform: scale(0.8);}
-  50%{transform: scale(0.6);}
-  100%{transform: scale(0.8);}
+    0%{transform: scale(0.67);}
+    50%{transform: scale(0.4);}
+    100%{transform: scale(0.67);}
   }
-  section div:hover {
-  transform: scale(0.9);
-  background-color: #0192ec;
-  }
+}
+@keyframes small {
+  0%{transform: scale(0.67);}
+  50%{transform: scale(0.5);}
+  100%{transform: scale(0.67);}
 }
 
-@keyframes small {
-  0%{transform: scale(1);}
-  50%{transform: scale(0.8);}
-  100%{transform: scale(1);}
-}
 .fadeOut {
   opacity: 0;
   pointer-events: none;
@@ -156,3 +149,4 @@ section div:hover {
   0%{transform: scale(1);}
   100%{transform: scale(0);}
 }
+
