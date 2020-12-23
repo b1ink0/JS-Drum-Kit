@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="score">
+  <h1>Score</h1>
+  <p>0</p>
+</div>
+<div class="play">
+  <button id="playButton">Play</button>
+</div>
+<section class="start1 fadeOut">
+<div class="A">
+  <button onclick="playAudioa()" onclick="AA()" class="a">A<p>CLAP</p></button>
+</div>
+<div class="S">
+  <button onclick="playAudios()" class="s">S<p>HIHAT</p></button>
+</div>
+<div class="D">
+  <button onclick="playAudiod()" class="d">D<p>KICK</p></button>
+</div>
+<div class="F">
+  <button onclick="playAudiof()" class="f">F<p>OPENHAT</p></button>
+</div>
+<div class="G">
+  <button onclick="playAudiog()" class="g">G<p>BOOM</p></button>
+</div>
+<div class="H">
+  <button onclick="playAudioh()" class="h">H<p>RIDE</p></div></button>
+<div class="J">
+  <button onclick="playAudioj()" class="j">J<p>SNARE</p></div></button>
+<div class="K">
+  <button onclick="playAudiok()" class="k">K<p>TOM</p></button> 
+</div>
+<div class="L">
+  <button onclick="playAudiol()" class="l">L<p>TINK</p></button> 
+</div>
+</section>
+<script src="js.js"></script>
+<div>
+<!--Sounds-->
+<audio src="sounds/clap.wav" type="audio/ogg" id="a"></audio>
+<audio src="sounds/hihat.wav" type="audio/ogg" id="s"></audio>
+<audio src="sounds/kick.wav" type="audio/ogg" id="d"></audio>
+<audio src="sounds/openhat.wav" type="audio/ogg" id="f"></audio>
+<audio src="sounds/boom.wav" type="audio/ogg" id="g"></audio>
+<audio src="sounds/ride.wav" type="audio/ogg" id="h"></audio>
+<audio src="sounds/snare.wav" type="audio/ogg" id="j"></audio>
+<audio src="sounds/tom.wav" type="audio/ogg" id="k"></audio>
+<audio src="sounds/tink.wav" type="audio/ogg" id="l"></audio>
+</div>
+
+
+
+
+
+
+<script>
+
+const soundA = document.getElementById("a");
+const soundS = document.getElementById("s");
+const soundD = document.getElementById("d");
+const soundF = document.getElementById("f");
+const soundG = document.getElementById("g");
+const soundH = document.getElementById("h");
+const soundJ = document.getElementById("j");
+const soundK = document.getElementById("k");
+const soundL = document.getElementById("l");
+
+
+
+function AA() {
+  const a1 = document.querySelector(".A");
+  a1.style.animation = "small 0.4 ease";
+  a1.addEventListener("animationend", function (){
+                this.style.animation = "";
+            });
+}
+
+
+function playAudioa() { 
+  soundA.currentTime = 0;
+  soundA.play(); 
+} 
+function playAudios() { 
+  soundS.currentTime = 0;
+  soundS.play(); 
+}
+function playAudiod() { 
+  soundD.currentTime = 0;
+  soundD.play(); 
+}
+function playAudiof() { 
+  soundF.currentTime = 0;
+  soundF.play(); 
+}
+function playAudiog() { 
+  soundG.currentTime = 0;
+  soundG.play(); 
+}
+function playAudioh() { 
+  soundH.currentTime = 0;
+  soundH.play(); 
+}
+function playAudioj() { 
+  soundJ.currentTime = 0;
+  soundJ.play(); 
+}
+function playAudiok() { 
+  soundK.currentTime = 0;
+  soundK.play(); 
+}
+function playAudiol() { 
+  soundL.currentTime = 0;
+  soundL.play(); 
+}
+
+</script>
+
+
+
+
+</body>
+</html>

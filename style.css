@@ -1,0 +1,146 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  height: 100hv;
+  display: flex;
+  justify-content: space-around;
+  background: black;
+  font-family: sans-serif;
+  color: white;
+  background: #12232E;
+}
+section {
+  position: relative;
+  top: 300px;
+  height: 200px;
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  transition: o;
+}
+section div {
+  background: #007CC7;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+button {
+  background: none;
+  border: 5px solid;
+  border-color: #EEFBFB;
+  width: 90px;
+  height: 90px;
+  color: #EEFBFB;
+  font-size: 35px;
+  cursor: pointer;
+  font-weight: bold;
+  transition-duration: 0.4s;
+  
+}
+p {
+  font-size: 15px;
+  font-weight: bold;
+}
+section div:hover {
+  transform: scale(1.1);
+  background-color: #0192ec;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  section{
+    top: 150px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 180px);
+    transition: opacity 2s ease;
+  }
+  #playButton {
+    background: #007CC7;
+    border: 5px solid;
+    border-color: #EEFBFB;
+    width: 90px;
+    height: 90px;
+    color: #EEFBFB;
+    font-size: 35px;
+    cursor: pointer;
+    font-weight: bold;
+    transition-duration: 0.4s;
+  }
+  .play {
+    position: fixed;
+    top: 300px;
+    display: flex;
+    
+    z-index: 12;
+    transition: opacity 1s ease;
+  }
+  button {
+    transform: scale(1.8);
+    background: #007CC7;
+  }
+  section div:hover {
+    transform: scale(1);
+    background-color: #0192ec;
+  }
+}
+
+@keyframes small {
+  0%{transform: scale(1);}
+  50%{transform: scale(0.8);}
+  100%{transform: scale(1);}
+}
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.score {
+  top: 20px;
+  position:fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.score h1 {
+  font-size: 50px;
+}
+.score p{
+  font-size: 50px;
+  letter-spacing: 7px;
+  font-family: 'Orbitron', sans-serif;
+}
+.play {
+  position: fixed;
+  top: 380px;
+  background: #007CC7;
+}
+.play button {
+  background: none;
+  border: 5px solid;
+  border-color: #EEFBFB;
+  width: 200px;
+  height: 90px;
+  color: #EEFBFB;
+  font-size: 35px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 3s ease;
+}
+.play:hover {
+  transform: scale(1.1);
+  background-color: #0192ec;
+}
+@keyframes start {
+  0%{transform: scale(1);}
+  100%{transform: scale(0);}
+}
