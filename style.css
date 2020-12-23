@@ -94,7 +94,11 @@ section div:hover {
   0%{transform: scale(0.9);}
   50%{transform: scale(0.7);}
   100%{transform: scale(0.9);}
-}
+  }
+  section div:hover {
+  transform: scale(0.9);
+  background-color: #0192ec;
+  }
 }
 
 @keyframes small {
