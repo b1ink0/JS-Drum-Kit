@@ -1,15 +1,7 @@
-var time_stamp = 0; // Or Date.now()
-window.addEventListener("touchstart", function(event_) {
-    if (event_.timeStamp - time_stamp < 200) { // A tap that occurs less than 300 ms from the last tap will trigger a double tap. This delay may be different between browsers.
-        event_.preventDefault();
-        return false;
-    }
-    time_stamp = event_.timeStamp;
-});
-
-
-
-
+//play
+const play = document.getElementById("playButton");
+let pScore = 0;
+//button class
 const a = document.querySelector(".a");
 const s = document.querySelector(".s");
 const d = document.querySelector(".d");
@@ -19,16 +11,71 @@ const h = document.querySelector(".h");
 const j = document.querySelector(".j");
 const k = document.querySelector(".k");
 const l = document.querySelector(".l");
-const play = document.getElementById("playButton");
-let pScore = 0;
+//ids of sound
+const soundA = document.getElementById("a");
+const soundS = document.getElementById("s");
+const soundD = document.getElementById("d");
+const soundF = document.getElementById("f");
+const soundG = document.getElementById("g");
+const soundH = document.getElementById("h");
+const soundJ = document.getElementById("j");
+const soundK = document.getElementById("k");
+const soundL = document.getElementById("l");
 
-//score
-const updateScore = () =>{
+//start
+document.addEventListener("DOMContentLoaded", function(){
+    //forAnimationOfButton
+    function AA() {
+        const a1 = document.querySelector(".A");
+        a1.style.animation = "small 0.4 ease";
+        a1.addEventListener("animationend", function (){
+                      this.style.animation = "";
+                  });
+      }
+      document.querySelector("button").onclick = AA();
+      //function for playing audios by buttons
+      function playAudioa() { 
+        soundA.currentTime = 0;
+        soundA.play(); 
+      } 
+      function playAudios() { 
+        soundS.currentTime = 0;
+        soundS.play(); 
+      }
+      function playAudiod() { 
+        soundD.currentTime = 0;
+        soundD.play(); 
+      }
+      function playAudiof() { 
+        soundF.currentTime = 0;
+        soundF.play(); 
+      }
+      function playAudiog() { 
+        soundG.currentTime = 0;
+        soundG.play(); 
+      }
+      function playAudioh() { 
+        soundH.currentTime = 0;
+        soundH.play(); 
+      }
+      function playAudioj() { 
+        soundJ.currentTime = 0;
+        soundJ.play(); 
+      }
+      function playAudiok() { 
+        soundK.currentTime = 0;
+        soundK.play(); 
+      }
+      function playAudiol() { 
+        soundL.currentTime = 0;
+        soundL.play(); 
+      }
+      //score
+    const updateScore = () =>{
     const playerScore = document.querySelector(".score p");
     playerScore.textContent = pScore;
-}
-
-// for smartphones
+    }
+    // for smartphones
 
 const button = ()=>{
 
@@ -44,9 +91,9 @@ const button = ()=>{
     })
 
     a.addEventListener("click", function(){
-        console.log("a")
+        playAudioa();
         const aa = document.querySelector(".A")
-        aa.style.animation = "small 0.4s ease"
+        aa.style.animation = "small 0.3s ease"
         aa.addEventListener("animationend", function (){
             this.style.animation = "";
         }); 
@@ -54,9 +101,9 @@ const button = ()=>{
         updateScore();
     })
     s.addEventListener("click", function(){
-        console.log("s")
+        playAudios();
         const ss = document.querySelector(".S")
-            ss.style.animation = "small 0.4s ease"
+            ss.style.animation = "small 0.3s ease"
             ss.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -64,9 +111,9 @@ const button = ()=>{
             updateScore();
     })
     d.addEventListener("click", function(){
-        console.log("d")
+        playAudiod();
         const dd = document.querySelector(".D")
-            dd.style.animation = "small 0.4s ease"
+            dd.style.animation = "small 0.3s ease"
             dd.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -74,9 +121,9 @@ const button = ()=>{
             updateScore();
     })
     f.addEventListener("click", function(){
-        console.log("f")
+        playAudiof();
         const ff = document.querySelector(".F")
-            ff.style.animation = "small 0.4s ease"
+            ff.style.animation = "small 0.3s ease"
             ff.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -84,9 +131,9 @@ const button = ()=>{
             updateScore();
     })
     g.addEventListener("click", function(){
-        console.log("g")
+        playAudiog();
         const gg = document.querySelector(".G")
-            gg.style.animation = "small 0.4s ease"
+            gg.style.animation = "small 0.3s ease"
             gg.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -94,9 +141,9 @@ const button = ()=>{
             updateScore();
     })
     h.addEventListener("click", function(){
-        console.log("h")
+        playAudioh();
         const hh = document.querySelector(".H")
-            hh.style.animation = "small 0.4s ease"
+            hh.style.animation = "small 0.3s ease"
             hh.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -104,9 +151,9 @@ const button = ()=>{
             updateScore();
     })
     j.addEventListener("click", function(){
-        console.log("j")
+        playAudioj();
         const jj = document.querySelector(".J")
-            jj.style.animation = "small 0.4s ease"
+            jj.style.animation = "small 0.3s ease"
             jj.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -114,9 +161,9 @@ const button = ()=>{
             updateScore();
     })
     k.addEventListener("click", function(){
-        console.log("k")
+        playAudiok();
         const kk = document.querySelector(".K")
-            kk.style.animation = "small 0.4s ease"
+            kk.style.animation = "small 0.3s ease"
             kk.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -124,9 +171,9 @@ const button = ()=>{
             updateScore();
     })
     l.addEventListener("click", function(){
-        console.log("l")
+        playAudiol();
         const ll = document.querySelector(".L")
-            ll.style.animation = "small 0.4s ease"
+            ll.style.animation = "small 0.3s ease"
             ll.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -135,17 +182,15 @@ const button = ()=>{
     })
 };
 button();
-
-// for pc
+    // for pc
 
 const key = ()=>{
     window.addEventListener("keydown", function (e){
         if (e.key === "a" || e.key === "A") {
             soundA.currentTime = 0;
             soundA.play(); 
-            console.log("a")
             const aa = document.querySelector(".A")
-            aa.style.animation = "small 0.4s ease"
+            aa.style.animation = "small 0.3s ease"
             aa.addEventListener("animationend", function (){
                 this.style.animation = "";
             }); 
@@ -157,9 +202,8 @@ const key = ()=>{
         if (e.key === "s" || e.key === "S") {
             soundS.currentTime = 0;
             soundS.play(); 
-            console.log("s")
             const ss = document.querySelector(".S")
-            ss.style.animation = "small 0.4s ease"
+            ss.style.animation = "small 0.3s ease"
             ss.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -172,9 +216,8 @@ const key = ()=>{
         if (e.key === "d" || e.key === "D") {
             soundD.currentTime = 0;
             soundD.play(); 
-            console.log("d")
             const dd = document.querySelector(".D")
-            dd.style.animation = "small 0.4s ease"
+            dd.style.animation = "small 0.3s ease"
             dd.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -186,9 +229,8 @@ const key = ()=>{
         if (e.key === "f" || e.key === "F") {
             soundF.currentTime = 0;
             soundF.play(); 
-            console.log("f")
             const ff = document.querySelector(".F")
-            ff.style.animation = "small 0.4s ease"
+            ff.style.animation = "small 0.3s ease"
             ff.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -200,9 +242,8 @@ const key = ()=>{
         if (e.key === "g" || e.key === "G") {
             soundG.currentTime = 0;
             soundG.play(); 
-            console.log("g")
             const gg = document.querySelector(".G")
-            gg.style.animation = "small 0.4s ease"
+            gg.style.animation = "small 0.3s ease"
             gg.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -214,9 +255,8 @@ const key = ()=>{
         if (e.key === "h" || e.key === "H") {
             soundH.currentTime = 0;
             soundH.play(); 
-            console.log("h")
             const hh = document.querySelector(".H")
-            hh.style.animation = "small 0.4s ease"
+            hh.style.animation = "small 0.3s ease"
             hh.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -227,10 +267,9 @@ const key = ()=>{
     window.addEventListener("keydown", function (e){
         if (e.key === "j" || e.key === "J") {
             soundJ.currentTime = 0;
-            soundJ.play(); 
-            console.log("j")
+            soundJ.play();
             const jj = document.querySelector(".J")
-            jj.style.animation = "small 0.4s ease"
+            jj.style.animation = "small 0.3s ease"
             jj.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -241,10 +280,9 @@ const key = ()=>{
     window.addEventListener("keydown", function (e){
         if (e.key === "k" || e.key === "K") {
             soundK.currentTime = 0;
-            soundK.play(); 
-            console.log("k")
+            soundK.play();
             const kk = document.querySelector(".K")
-            kk.style.animation = "small 0.4s ease"
+            kk.style.animation = "small 0.3s ease"
             kk.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -255,10 +293,9 @@ const key = ()=>{
     window.addEventListener("keydown", function (e){
         if (e.key === "l" || e.key === "L") {
             soundL.currentTime = 0;
-            soundL.play(); 
-            console.log("l");
+            soundL.play();
             const ll = document.querySelector(".L")
-            ll.style.animation = "small 0.4s ease"
+            ll.style.animation = "small 0.3s ease"
             ll.addEventListener("animationend", function (){
                 this.style.animation = "";
             });
@@ -266,5 +303,9 @@ const key = ()=>{
             updateScore();
         };
     })
-};
+  };
 key();
+});
+
+
+

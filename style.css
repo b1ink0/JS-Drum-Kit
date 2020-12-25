@@ -21,13 +21,13 @@ section {
   align-items: center;
 }
 section div {
-  background: #007CC7;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 button {
-  background: none;
+  background: #007CC7;
   border: 5px solid;
   border-color: #EEFBFB;
   width: 90px;
@@ -37,14 +37,12 @@ button {
   cursor: pointer;
   font-weight: bold;
   transition-duration: 0.4s;
-  
 }
 p {
   font-size: 15px;
   font-weight: bold;
 }
 section div:hover {
-  /*transform: scale(1.1);*/
   background-color: #0192ec;
 }
 @media only screen and (max-width: 768px) {
@@ -53,12 +51,14 @@ section div:hover {
     top: 150px;
     display: grid;
     grid-gap: 1px;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 130px);
+    grid-template-columns: repeat(3,90px);
+    grid-template-rows: repeat(3, 120px);
     transition: opacity 2s ease;
+    transform: scale(1);
+    width: 100%;
   }
   section div {
-    transform: scale(0.67);
+    transform: scale(1);
   }
   #playButton {
     background: #007CC7;
@@ -81,22 +81,18 @@ section div:hover {
     transition: opacity 1s ease;
   }
   button {
-    transform: scale(1.8);
+    
     background: #007CC7;
   }
   section div:hover {
     background-color: #0192ec;
   }
-  @keyframes small {
-    0%{transform: scale(0.67);}
-    50%{transform: scale(0.4);}
-    100%{transform: scale(0.67);}
-  }
 }
+
 @keyframes small {
-  0%{transform: scale(0.67);}
+  0%{transform: scale(1);}
   50%{transform: scale(0.5);}
-  100%{transform: scale(0.67);}
+  100%{transform: scale(1);}
 }
 
 .fadeOut {
@@ -149,4 +145,3 @@ section div:hover {
   0%{transform: scale(1);}
   100%{transform: scale(0);}
 }
-
