@@ -14,48 +14,49 @@
     <h1>Score</h1>
     <p>0</p>
   </div>
-  <div class="play">
+  <div class="play" id="play">
     <button id="playButton">Play</button>
   </div>
   <section class="start1 fadeOut">
-    <div class="A">
-      <button class="a">A<p>CLAP</p></button>
+    <div data-anm='a'  id="a"   class="A">
+      <button data-sound="a" class="a">A<p>CLAP</p></button>
     </div>
-    <div class="S">
-      <button class="s">S<p>HIHAT</p></button>
+    <div data-anm='s' id="s" class="S">
+      <button data-sound="s" class="s">S<p>HIHAT</p></button>
     </div>
-    <div class="D">
-      <button class="d">D<p>KICK</p></button>
+    <div data-anm='d' id="d" class="D">
+      <button data-sound="d" class="d">D<p>KICK</p></button>
     </div>
-    <div class="F">
-      <button class="f">F<p>OPENHAT</p></button>
+    <div data-anm='f' id="f" class="F">
+      <button data-sound="f" class="f">F<p>OPENHAT</p></button>
     </div>
-    <div class="G">
-      <button class="g">G<p>BOOM</p></button>
+    <div data-anm='g' id="g" class="G">
+      <button data-sound="g" class="g">G<p>BOOM</p></button>
     </div>
-    <div class="H">
-      <button class="h">H<p>RIDE</p></div></button>
-    <div class="J">
-      <button class="j">J<p>SNARE</p></div></button>
-    <div class="K">
-      <button class="k">K<p>TOM</p></button> 
+    <div data-anm='h' id="h" class="H">
+      <button data-sound="h" class="h">H<p>RIDE</p></button>
     </div>
-    <div class="L">
-      <button class="l">L<p>TINK</p></button> 
+    <div data-anm='j' id="j" class="J">
+      <button data-sound="j" class="j">J<p>SNARE</p></button>
+    </div>
+    <div data-anm='k' id="k" class="K">
+      <button data-sound="k" class="k">K<p>TOM</p></button> 
+    </div>
+    <div data-anm='l' id="l" class="L">
+      <button data-sound="l" class="l">L<p>TINK</p></button> 
     </div>
   </section>
-
   <div>
 <!--Sounds-->
-    <audio src="sounds/clap.wav" type="audio/ogg" id="a"></audio>
-    <audio src="sounds/hihat.wav" type="audio/ogg" id="s"></audio>
-    <audio src="sounds/kick.wav" type="audio/ogg" id="d"></audio>
-    <audio src="sounds/openhat.wav" type="audio/ogg" id="f"></audio>
-    <audio src="sounds/boom.wav" type="audio/ogg" id="g"></audio>
-    <audio src="sounds/ride.wav" type="audio/ogg" id="h"></audio>
-    <audio src="sounds/snare.wav" type="audio/ogg" id="j"></audio>
-    <audio src="sounds/tom.wav" type="audio/ogg" id="k"></audio>
-    <audio src="sounds/tink.wav" type="audio/ogg" id="l"></audio>
+    <audio src="sounds/clap.wav" type="audio/ogg" id="as"></audio>
+    <audio src="sounds/hihat.wav" type="audio/ogg" id="ss"></audio>
+    <audio src="sounds/kick.wav" type="audio/ogg" id="ds"></audio>
+    <audio src="sounds/openhat.wav" type="audio/ogg" id="fs"></audio>
+    <audio src="sounds/boom.wav" type="audio/ogg" id="gs"></audio>
+    <audio src="sounds/ride.wav" type="audio/ogg" id="hs"></audio>
+    <audio src="sounds/snare.wav" type="audio/ogg" id="js"></audio>
+    <audio src="sounds/tom.wav" type="audio/ogg" id="ks"></audio>
+    <audio src="sounds/tink.wav" type="audio/ogg" id="ls"></audio>
   </div>
 <!--script-->
     <script src="script.js"></script>
