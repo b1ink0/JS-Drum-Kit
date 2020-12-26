@@ -24,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     pScore++;
                     updateScore();
                 } 
-             
-            })
-             
+            })   
         }
     })
     const button = ()=>{ 
